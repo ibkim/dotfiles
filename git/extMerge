@@ -1,0 +1,3 @@
+#!/bin/sh
+/opt/p4v/bin/p4merge $*
+

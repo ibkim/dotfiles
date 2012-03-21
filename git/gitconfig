@@ -1,0 +1,27 @@
+[color]
+	ui = auto
+[core]
+	editor = emacs
+[user]
+	name = ilbong kim
+	email = ibkim@lginnotek.com
+[alias]
+	st = status
+	sts = status -sb
+	ci = commit
+	co = checkout
+	br = branch
+[commit]
+	template = $HOME/.gitmessage.txt
+[merge]
+	tool = extMerge
+[mergetool "extMerge"]
+	cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[mergetool]
+	trustExitCode = false
+[diff]
+	external = extDiff
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 926x614+550+139
+	history-view-vpane-position = 329
