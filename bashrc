@@ -65,7 +65,7 @@ xterm*|rxvt*)
     ;;
 esac
 
-PS1='\[\033[00m\]\u@\h\[\033[01;34m\] \W \[\033[31m\]$(__git_ps1 "(%s)") \[\033[00m\]$\[\033[00m\] '
+PS1='\w\n\[\033[00m\]\u@\h\[\033[01;34m\] \W \[\033[31m\]$(__git_ps1 "(%s)") \[\033[00m\]$\[\033[00m\] '
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -84,6 +84,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias g='git'
+alias ..="cd .."
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
