@@ -65,7 +65,8 @@ xterm*|rxvt*)
     ;;
 esac
 
-PS1='\w\n\[\033[00m\]\u@\h\[\033[01;34m\] \W \[\033[31m\]$(__git_ps1 "(%s)") \[\033[00m\]$\[\033[00m\] '
+#PS1='\w\n\[\033[00m\]\u@\h\[\033[01;34m\] \W \[\033[31m\]$(__git_ps1 "(%s)") \[\033[00m\]$\[\033[00m\] '
+PS1='\[\033[00m\]\u@\h\[\033[01;34m\] \W \[\033[31m\]$(__git_ps1 "(%s)") \[\033[00m\]$\[\033[00m\] '
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -86,6 +87,10 @@ alias l='ls -CF'
 alias g='git'
 alias ..="cd .."
 
+export T32SYS=/opt/t32
+export T32TMP=/tmp
+export T32ID=T32
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -105,3 +110,6 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+export PATH=$PATH:/opt/t32/bin/pc_linux:/opt/android-sdk-linux/platform-tools:/reposi/project/softap/scripts
+
