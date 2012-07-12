@@ -1,0 +1,4 @@
+#Sooner low-level bootloader  18 
+SUBSYSTEM=="usb", SYSFS{idVendor}=="18d1", SYSFS{idProduct}=="d00d", MODE="0664", GROUP="plugdev"
+# adb composite interface device 9025
+SUBSYSTEM=="usb", SYSFS{idVendor}=="05C6", SYSFS{idProduct}=="9025", MODE="0664", GROUP="plugdev"
